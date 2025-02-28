@@ -1,0 +1,52 @@
+{
+  "name": "example-module-federation",
+  "version": "0.0.1",
+  "license": "MIT",
+  "private": true,
+  "packageManager": "pnpm@10.4.1+sha512.c753b6c3ad7afa13af388fa6d808035a008e30ea9993f58c6663e2bc5ff21679aa834db094987129aa4d488b86df57f7b634981b2f827cdcacc698cc0cfb88af",
+  "engines": {
+    "node": ">=22"
+  },
+  "engineStrict": true,
+  "scripts": {
+    "run:native:ios": "pnpm --filter native ios",
+    "run:native:android": "pnpm --filter native android",
+    "start:native": "mprocs -c mprocs/native.yaml",
+    "start:web": "mprocs -c mprocs/web.yaml",
+    "pods": "pnpm -r pods",
+    "pods:update": "pnpm -r pods:update",
+    "lint": "pnpm -r lint",
+    "test": "pnpm -r test",
+    "typecheck": "pnpm -r typecheck",
+    "align-deps": "pnpm -r align-deps",
+    "check-deps": "pnpm -r check-deps"
+  },
+  "dependencies": {
+    "mprocs": "^0.7.1"
+  },
+  "pnpm": {
+    "patchedDependencies": {
+      "@react-native/community-cli-plugin": "patches/@react-native__community-cli-plugin.patch",
+      "react-native-paper": "patches/react-native-paper.patch"
+    },
+    "packageExtensions": {
+      "@module-federation/data-prefetch": {
+        "peerDependenciesMeta": {
+          "react-dom": {
+            "optional": true
+          }
+        }
+      },
+      "babel-loader": {
+        "peerDependenciesMeta": {
+          "webpack": {
+            "optional": true
+          }
+        }
+      }
+    },
+    "allowedDeprecatedVersions": {
+      "eslint": "8"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+procs:
+  Host:
+    shell: pnpm --filter web dev
+    stop: SIGKILL
+  Auth:
+    shell: pnpm --filter auth dev
+    stop: SIGKILL
+  Booking:
+    shell: pnpm --filter booking dev
+    stop: SIGKILL

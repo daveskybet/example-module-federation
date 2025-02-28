@@ -1,0 +1,10 @@
+{
+    "data": [
+        {
+            "id": "booking",
+            "title": "Booking",
+            "description": "Check your schedule",
+            "image": "https://picsum.photos/700"
+        }
+    ]
+}
