@@ -59,25 +59,5 @@ pnpm start:native
 Run Super App on iOS or Android (ios | android), in a new tab:
 
 ```
-pnpm run:host:<platform>
-```
-
-### Code Quality Scripts
-
-Run tests for all apps:
-
-```
-pnpm test
-```
-
-Run linter for all apps:
-
-```
-pnpm lint
-```
-
-Run type check for all apps:
-
-```
-pnpm typecheck
+pnpm run:native:<platform>
 ```
