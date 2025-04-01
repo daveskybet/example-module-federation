@@ -24,16 +24,16 @@ pnpm pods:update
 
 ### Run
 
-Start dev server for all apps in root directory of this monorepo:
+Start dev server for all apps in root directory of this monorepo (web/native):
 
 ```
-pnpm start
+pnpm start:web
 ```
 
-Or start dev server for Host app:
+Or:
 
 ```
-pnpm start:host
+pnpm start:native
 ```
 
 Run iOS or Android app (ios | android):
